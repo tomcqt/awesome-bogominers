@@ -27,14 +27,14 @@ Got one that's missing? PRs are very welcome — see [Contributing](#contributin
 
 | Project | Backend | Interface | Platform | License |
 |---|---|---|---|---|
-| [**bogosort**](https://bogo.swapjs.dev/) — the official site & only "official" way to contribute. Browser-based, WebGPU-accelerated, with accounts, leaderboards, badges/XP, and an adjustable intensity slider (tiny → max). | WebGPU | 🌐 Web (browser) | Anywhere WebGPU runs | — |
+| [**bogosort**](https://bogo.swapjs.dev/) — the official site & one of the "official" way to contribute. Browser-based, WebGPU-accelerated, with accounts, leaderboards, badges/XP, and an adjustable intensity slider (tiny → max). | WebGPU | 🌐 Web (browser) | Anywhere WebGPU runs | — |
 
 ## Rust
 
 | Project | Backends | Interface | Platform | License | Notes |
 |---|---|---|---|---|---|
+| [**bogominer**](https://gitlab.com/ttomcat/bogominer) — the official native client, developed by tomcat with swap. | CPU · GPU (planned) | GUI | Windows · macOS · Linux | MIT | 🚧 Early development — not yet ready for use. |
 | [**bogo-gpu**](https://github.com/Wateristic/bogo-gpu) — GPU-focused worker with triple-buffered CUDA kernel dispatch, xoshiro128++ RNG, and a CPU-only Rayon fallback. Config saved to the OS-standard path on first run. | CPU (Rayon) · NVIDIA (CUDA) · AMD (HIP/ROCm) | ⌨️ CLI | Linux · Windows · macOS | — | No Vulkan support; CUDA is the default feature. Tuning guide in the README for matching `gpu_blocks`/`gpu_chunk_size` to your specific GPU. |
-| [**bogominer**](https://gitlab.com/ttomcat/bogominer) — the official native client, developed by swap. | TBD | CLI / TUI / GUI | TBD | TBD | 🚧 Early development — not yet ready for use. |
 | [**bogoforge**](https://github.com/mnhttn-cafe/bogoforge) — community client with an AVX-512-vectorized CPU kernel (xoshiro128++ + Fisher-Yates, hand-rolled with `std::simd`) and a built-in performance-stats TUI. | CPU · NVIDIA (CUDA) · AMD (HIP/ROCm) · Vulkan | 📺 TUI | Linux · Windows · macOS | GPL-2.0 | Picks backends via Cargo feature flags (`cuda`/`hip`/`vk`); CPU path is hand-tuned for modern AVX-512 hardware (e.g. Zen 5) and degrades gracefully without it. |
 
 ## C / C++
